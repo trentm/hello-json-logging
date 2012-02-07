@@ -1,3 +1,5 @@
 /tmp
 /*.log
+
+# Ignore node_modules binary bits.
 build
