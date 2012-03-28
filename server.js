@@ -33,10 +33,10 @@ var server = restify.createServer({
 });
 server.use(restify.queryParser());
 
-// Let's log every incoming request. `req.log` is a "child" or our logger
+// Let's log every incoming request. `req.log` is a "child" of our logger
 // with the following fields added by restify:
 // - a `req_id` UUID (to collate all log records for a particular request)
-// - a `route` name (to identify which handler this was routed to)
+// - a `route` (to identify which handler this was routed to)
 server.pre(function (req, res, next) {
   req.log.info({req: req}, 'start');
   return next();
