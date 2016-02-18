@@ -22,8 +22,8 @@ var log = new Logger({
   ],
   serializers: {
     req: Logger.stdSerializers.req,
-    res: restify.bunyan.serializers.response,
-  },
+    res: restify.bunyan.serializers.res
+  }
 });
 
 
